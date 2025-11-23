@@ -1,0 +1,10 @@
+[project]
+name = "asdatesgoby"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = [
+    "pandas>=2.3.3",
+    "pymeeus>=0.5.12",
+    "ruff>=0.14.5",
+]
