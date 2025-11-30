@@ -36,6 +36,6 @@ def evaluate_dates_timeshifts(df: pd.DataFrame) -> pd.DataFrame:
 
     for year, time_shift in d_dates.items():
         for shift_type, date_ in time_shift.items():
-            df.loc[date_, "timeShift"] = shift_type
+            df.loc[date_, "s_timeShift"] = shift_type
 
     return df
