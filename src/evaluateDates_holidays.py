@@ -86,14 +86,14 @@ def evaluate_dates_holiday_for_years(l_years: List[int]) -> Dict[str, date]:
         ## Good Friday (= Easter - 2d)
         d_holidays[easter + timedelta(days=-2)] = "Good Friday"
 
-        ## Good Tuesday (= Easter - 40d)
-        d_holidays[easter + timedelta(days=-40)] = "Good Tuesday"
+        ## Good Tuesday (= Easter - 47d)
+        d_holidays[easter + timedelta(days=-47)] = "Good Tuesday"
 
-        ## Ash Wednesday (= Easter - 39d)
-        d_holidays[easter + timedelta(days=-39)] = "Ash Wednesday"
+        ## Ash Wednesday (= Easter - 46d)
+        d_holidays[easter + timedelta(days=-46)] = "Ash Wednesday"
 
-        ## Ascension Day (= Easter + 40d)
-        d_holidays[easter + timedelta(days=40)] = "Ascension Day"
+        ## Ascension Day (= Easter + 39d)
+        d_holidays[easter + timedelta(days=39)] = "Ascension Day"
 
         ## Pentecost (= Easter + 49d)
         d_holidays[easter + timedelta(days=49)] = "Pentecost"
@@ -112,6 +112,6 @@ def evaluate_dates_holidays(df: pd.DataFrame) -> pd.DataFrame:
     """
     l_years = df["i_year"].unique().tolist()
     d_holidays = evaluate_dates_holiday_for_years(l_years)
-    df["holiday"] = df["date_"].map(d_holidays)
+    df["s_holiday"] = df["date_"].map(d_holidays)
     return df
 
