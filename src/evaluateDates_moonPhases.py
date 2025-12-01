@@ -9,7 +9,7 @@ from datetime import datetime, timedelta
 
 def evaluate_dates_moonphases(df: pd.DataFrame) -> pd.DataFrame:
     """
-    Add a column for moon phase information (Full Moon, New Moon) to the calendar datafrane.
+    Add a column for moon phase information (Full Moon, New Moon) to the calendar dataframe.
     :param df: calendar dataframe, to which a column for moon phase information should be added
     :return: calendar dataframe with moon phase information
     """
@@ -20,14 +20,14 @@ def evaluate_dates_moonphases(df: pd.DataFrame) -> pd.DataFrame:
     meanLunationPeriod = timedelta(days=29, hours=12, minutes=44, seconds=3)
     dt_2000_1stNewMoon = datetime(2000, 1, 6, 18, 14, 0, tzinfo=tz_utc)
     d_moon = {
-        "fullMoon_utc": [dt_2000_1stNewMoon],
-        "fullMoon_cet":  [dt_2000_1stNewMoon.astimezone(tz_cet)],
-        "newMoon_utc": [dt_2000_1stNewMoon + (meanLunationPeriod / 2)],
-        "newMoon_cet":  [(dt_2000_1stNewMoon + (meanLunationPeriod / 2)).astimezone(tz_cet)]
+        "newMoon_utc": [dt_2000_1stNewMoon],
+        "newMoon_cet": [dt_2000_1stNewMoon.astimezone(tz_cet)],
+        "fullMoon_utc": [dt_2000_1stNewMoon + (meanLunationPeriod / 2)],
+        "fullMoon_cet":  [(dt_2000_1stNewMoon + (meanLunationPeriod / 2)).astimezone(tz_cet)]
     }
 
-    dt_start = min(df["date_"]).to_pydatetime().astimezone(pytz.timezone("Europe/Zurich"))
-    dt_end = max(df["date_"]).to_pydatetime().astimezone(pytz.timezone("Europe/Zurich"))
+    dt_start = min(df["date_"]).to_pydatetime().astimezone(pytz.timezone("Europe/Berlin"))
+    dt_end = max(df["date_"]).to_pydatetime().astimezone(pytz.timezone("Europe/Berlin"))
     for k, v in d_moon.items():
         dt_moon = v[0]
         d_moon[k] = [datetime.date(v[0])]
