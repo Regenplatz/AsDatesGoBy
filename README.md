@@ -1,23 +1,11 @@
 # As Dates Go By
 
-<a href=https://www.python.org/>
-    <img src=https://img.shields.io/badge/Python-grey?logo=python&logoColor=FFE05D alt="Python">
-</a>
 
-<a href=https://pandas.pydata.org/>
-    <img src=https://img.shields.io/badge/Pandas-grey?logo=pandas&logoColor=130654 alt="Pandas">
-</a>
+[![Python][python-shield]][python-url]
+[![Pandas][pandas-shield]][pandas-url]
+[![PyMeeus][pymeeus-shield]][pymeeus-url]
+[![timezone][timezone-shield]][timezone-url]
 
-<a href=https://pymeeus.readthedocs.io/en/latest/>
-    <img src=https://img.shields.io/badge/PyMeeus-grey alt="PyMeeus">
-</a>
-
-<a href=https://en.wikipedia.org/wiki/Central_European_Time>
-    <img src=https://img.shields.io/badge/timezone-CET-blue alt="Time Zone: CET">
-</a>
-
-
-<br>
 
 <a id="readme-top"></a>
 
@@ -130,3 +118,14 @@ To calculate `Astronomical Beginnings of Seasons`, various astronomical factors 
 In this project, the package [PyMeeus](https://pymeeus.readthedocs.io/en/latest/) is used for simple calculation.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+[python-shield]: https://img.shields.io/badge/Python-grey?logo=python&logoColor=FFE05D
+[python-url]: https://www.python.org/
+[pandas-shield]: https://img.shields.io/badge/Pandas-grey?logo=pandas&logoColor=130654
+[pandas-url]: https://pandas.pydata.org/
+[pymeeus-shield]: https://img.shields.io/badge/PyMeeus-grey
+[pymeeus-url]: https://pymeeus.readthedocs.io/en/latest/
+[timezone-shield]: https://img.shields.io/badge/timezone-CET-blue
+[timezone-url]: https://en.wikipedia.org/wiki/Central_European_Time
