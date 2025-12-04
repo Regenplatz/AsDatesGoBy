@@ -53,7 +53,7 @@ def evaluate_workingday(df: pd.DataFrame) -> pd.DataFrame:
     :param df: calendar dataframe, to which an additional column for working day is added.
     :return: calendar dataframe, containing an additional column for working day
     """
-    cond = (df["b_weekend"] != 1) & (pd.isna(df["holiday"]))
+    cond = (df["b_weekend"] != 1) & (pd.isna(df["s_holiday"]))
     df["b_workingday"] = 0
     df["b_workingday"] = np.where(cond, 1, 0)
     return df

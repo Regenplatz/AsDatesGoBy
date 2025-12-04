@@ -48,5 +48,5 @@ def evaluate_dates_seasonstarts(df: pd.DataFrame) -> pd.DataFrame:
     ## evaluate holidays for all years in calendar dataframe
     l_years = df["i_year"].unique().tolist()
     d_seasonstarts = evaluate_dates_seasonstarts_for_years(l_years)
-    df["beginning_of_season"] = df["date_"].map(d_seasonstarts)
+    df["s_beginning_of_season"] = df["date_"].map(d_seasonstarts)
     return df
